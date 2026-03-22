@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 40px;
+}
+
+/* Title */
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Input */
+#inputBox {
+  width: 400px;
+  height: 45px;
+  font-size: 18px;
+  padding: 8px 12px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s;
+}
+
+#inputBox:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+/* Keyboard container */
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Each row */
+.keyboard div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Keys */
+.key {
+  min-width: 45px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Hover */
+.key:hover {
+  background: #e9f3ff;
+  border-color: #007bff;
+}
+
+/* Click effect */
+.key:active {
+  transform: scale(0.95);
+  background: #d0e7ff;
+}
+
+/* Special keys */
+.special {
+  background: #f1f3f5;
+  font-weight: bold;
+}
+
+/* Bigger keys */
+.key[data-key="SPACE"] {
+  width: 250px;
+}
+
+.key[data-key="BACKSPACE"] {
+  width: 120px;
+}
+
+.key[data-key="ENTER"] {
+  width: 120px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #inputBox {
+    width: 90%;
+  }
+
+  .key {
+    min-width: 35px;
+    padding: 10px;
+  }
+
+  .key[data-key="SPACE"] {
+    width: 180px;
+  }
+}
