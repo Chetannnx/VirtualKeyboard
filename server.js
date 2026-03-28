@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/Icons', express.static(path.join(__dirname, 'Icons')));
 
 // 🔹 Config
-const HOST = '192.168.1.2';
+const HOST = '192.168.1.24';
 const PORT = 3003;
 
 // 🔹 HTTPS using mkcert certificates
